@@ -8,7 +8,7 @@ class Image
     @fileName = fileName	
   end
 
-  def horseShoeMap(key=1)
+  def horseShoeMap(key=2) # folded baker map
     fileName = @fileName
     key.times do
       image = ChunkyPNG::Image.from_file(fileName)
@@ -24,7 +24,7 @@ class Image
     end
   end  
 
-  def bakerMap(key=1)
+  def bakerMap(key=2)
     fileName = @fileName
     key.times do
       image = ChunkyPNG::Image.from_file(fileName)
@@ -38,7 +38,6 @@ class Image
       scrambledImg.save('../output/baker.png')
       fileName = '../output/baker.png'
     end
-
   end
 
 end
