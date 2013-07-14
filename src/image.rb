@@ -40,4 +40,29 @@ class Image
     end
   end
 
+  def acMap(key=2) # Arnold's Cat Map
+    fileName = @fileName
+    key.times do
+      image = ChunkyPNG::Image.from_file(fileName)
+      h = image.height
+      w = image.width
+      scrambledImg = ChunkyPNG::Image.new(w, h, ChunkyPNG::Color::TRANSPARENT)
+      w.times do |i|
+        h.times do |j|
+        p = (2*i+j)%w
+        q = (i+j)%h       
+        if(p==0) 
+          p=w-1
+        end
+        if(q==0)
+          q=h-1
+        end
+        scrambledImg[i,j] = image[p, q]
+        end
+      end  
+      scrambledImg.save('../output/acm.png')
+      fileName = '../output/acm.png'
+    end
+  end
+
 end
