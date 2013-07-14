@@ -30,6 +30,7 @@ require 'image.rb'
 img = Image.new('./filepath/somePNG')
 
 img.bakerMap(10) 
-img.horseShoeMap(10)  
+img.horseShoeMap(10)
+img.acMap(10) # Arnold's cat map
 # check output/ directory for the scrambled images
 </pre>
