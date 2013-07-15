@@ -2,7 +2,7 @@ chaotic maps
 ============
 A ruby library to encrypt image or text inputs based on chaotic maps.
 
-Maps : Baker's Map, Horseshoe Map, Henon Map, Lorenz Atrractor, Arnold's Cat Map, Standard Map
+Maps : Baker's Map, Horseshoe Map, Henon's Map, Arnold's Cat Map
 
 <h3>Requires : </h3>
 
@@ -32,5 +32,6 @@ img = Image.new('./filepath/somePNG')
 img.bakerMap(10) 
 img.horseShoeMap(10)
 img.acMap(10) # Arnold's cat map
+img.henonMap(10)
 # check output/ directory for the scrambled images
 </pre>
